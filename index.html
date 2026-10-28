@@ -699,6 +699,10 @@ select.lang.light{color:var(--panel-ink); box-shadow:inset 0 0 0 1px var(--line)
   .callpanel .sep{margin:8px 0}
 }
 
+.delbtn{color:var(--bad) !important; box-shadow:inset 0 0 0 1.5px currentColor !important; font-weight:700}
+.admin{margin-top:14px; font-size:.85rem}
+.admin summary{cursor:pointer; color:var(--muted)}
+
 </style>
 </head>
 <body>
@@ -810,7 +814,7 @@ select.lang.light{color:var(--panel-ink); box-shadow:inset 0 0 0 1px var(--line)
 <script>
 const I18N = {
   it: {
-    tag: 'Il gioco delle prese che sale e scende. Chiama giusto, gioca furbo.', pillCall: 'chiama', pillTaken: 'prese', langBtn: 'Cambia lingua', freeBtn: 'Versione free', freeActive: 'Versione free attiva', freeTitle: 'Versione free', freeText: 'Per creare una partita online, entrare con un codice o riprenderne una dall’elenco serve il codice della versione free. Lo inserisci una volta sola: resta attivo su questo dispositivo. La demo resta libera per tutti.', freeAlready: 'La versione free è già attiva su questo dispositivo: puoi giocare online.', freeCode: 'Codice della versione free', freeActivate: 'Attiva', freeOk: 'Versione free attivata', freeBad: 'Codice non valido, controlla maiuscole e simboli.', viewTop: 'Vista dall’alto', viewRoom: 'Guarda la sala', room_bar: 'Bar della hall', room_library: 'Ristorante', room_jazz: 'Salotto jazz', room_cigar: 'Salone delle feste', lookReset: 'Torna al tavolo', music: 'Musica', volume: 'Volume', musicOn: 'Accendi la musica', musicOff: 'Spegni la musica', dragLook: 'Trascina per guardarti intorno, rotella o due dita per avvicinarti', room_rooftop: 'Terrazza sul tetto', room_hall: 'Hall dell’hotel', soundOn: 'Attiva i suoni', soundOff: 'Disattiva i suoni', soundSub: 'Carte, campanello dell’ascensore, turno', onlineNow: '{n} online', stLobby: 'In attesa di giocatori', stPlaying: 'In corso, mano {r}/{n}', stPaused: 'In pausa', stSaved: 'Salvata', stEnded: 'Finita', enterBtn: 'Rientra', watch: 'Guarda', delete: 'Elimina', deleteQ: 'Eliminare questa partita per tutti?', openGames: 'Partite online', savedHere: 'Partite salvate su questo dispositivo', menu: 'Menu', saveExit: 'Salva ed esci', saveExitDemo: 'La ritrovi nella schermata iniziale', saveExitOnline: 'Ferma il tempo per tutti; la riprendete dall’elenco partite', pauseSub: 'Si riprende da sola dopo 10 minuti', resetLayout: 'Rimetti a posto pannelli e oggetti', resetLayoutSub: 'Annulla gli spostamenti che hai fatto', abandon: 'Abbandona la partita', abandonSub: 'Il computer giocherà al posto tuo', abandonQ: 'Vuoi abbandonare? Il computer giocherà al posto tuo fino alla fine.', backHomeSub: 'La partita resta aperta, puoi rientrare', savedTitle: 'Partita salvata', savedBy: 'L’host ha salvato la partita. La riprendete dall’elenco partite quando volete, con il tempo pieno.', savedToast: 'Partita salvata', whereHome: 'nella schermata iniziale', whereDemo: 'sta provando la demo', whereRoom: 'nella stanza {c}', anon: 'Senza nome', dragHint: 'Trascina per spostare, doppio clic per rimetterlo al suo posto', minimize: 'Riduci', playHint: 'Tocca di nuovo la carta o il tavolo per giocarla',
+    tag: 'Il gioco delle prese che sale e scende. Chiama giusto, gioca furbo.', pillCall: 'chiama', pillTaken: 'prese', langBtn: 'Cambia lingua', freeBtn: 'Versione free', freeActive: 'Versione free attiva', freeTitle: 'Versione free', freeText: 'Per creare una partita online, entrare con un codice o riprenderne una dall’elenco serve il codice della versione free. Lo inserisci una volta sola: resta attivo su questo dispositivo. La demo resta libera per tutti.', freeAlready: 'La versione free è già attiva su questo dispositivo: puoi giocare online.', freeCode: 'Codice della versione free', freeActivate: 'Attiva', freeOk: 'Versione free attivata', freeBad: 'Codice non valido, controlla maiuscole e simboli.', viewTop: 'Vista dall’alto', viewRoom: 'Guarda la sala', room_bar: 'Bar della hall', room_library: 'Ristorante', room_jazz: 'Salotto jazz', room_cigar: 'Salone delle feste', lookReset: 'Torna al tavolo', music: 'Musica', volume: 'Volume', musicOn: 'Accendi la musica', musicOff: 'Spegni la musica', dragLook: 'Trascina per guardarti intorno, rotella o due dita per avvicinarti', room_rooftop: 'Terrazza sul tetto', room_hall: 'Hall dell’hotel', soundOn: 'Attiva i suoni', soundOff: 'Disattiva i suoni', soundSub: 'Carte, campanello dell’ascensore, turno', onlineNow: '{n} online', stLobby: 'In attesa di giocatori', stPlaying: 'In corso, mano {r}/{n}', stPaused: 'In pausa', stSaved: 'Salvata', stEnded: 'Finita', enterBtn: 'Rientra', watch: 'Guarda', delete: 'Elimina', deleteGame: 'Elimina partita', deleteGameSub: 'La cancelli per tutti i giocatori', deleteHostOnly: 'Solo chi ha creato la partita può eliminarla.', adminLink: 'Accesso amministratore', adminKey: 'Chiave amministratore', adminOk: 'Accesso amministratore attivo', adminBad: 'Chiave non valida.', adminOn: 'Amministratore attivo su questo dispositivo.', adminOff: 'Disattiva', deleteQ: 'Eliminare questa partita per tutti?', openGames: 'Partite online', savedHere: 'Partite salvate su questo dispositivo', menu: 'Menu', saveExit: 'Salva ed esci', saveExitDemo: 'La ritrovi nella schermata iniziale', saveExitOnline: 'Ferma il tempo per tutti; la riprendete dall’elenco partite', pauseSub: 'Si riprende da sola dopo 10 minuti', resetLayout: 'Rimetti a posto pannelli e oggetti', resetLayoutSub: 'Annulla gli spostamenti che hai fatto', abandon: 'Abbandona la partita', abandonSub: 'Il computer giocherà al posto tuo', abandonQ: 'Vuoi abbandonare? Il computer giocherà al posto tuo fino alla fine.', backHomeSub: 'La partita resta aperta, puoi rientrare', savedTitle: 'Partita salvata', savedBy: 'L’host ha salvato la partita. La riprendete dall’elenco partite quando volete, con il tempo pieno.', savedToast: 'Partita salvata', whereHome: 'nella schermata iniziale', whereDemo: 'sta provando la demo', whereRoom: 'nella stanza {c}', anon: 'Senza nome', dragHint: 'Trascina per spostare, doppio clic per rimetterlo al suo posto', minimize: 'Riduci', playHint: 'Tocca di nuovo la carta o il tavolo per giocarla',
     yourName: 'Il tuo nome', namePh: 'Come ti chiamano al tavolo',
     create: 'Crea stanza', join: 'Entra', code: 'Codice stanza', or: 'oppure',
     demo: 'Prova la demo', rules: 'Regole', language: 'Lingua',
@@ -855,7 +859,7 @@ const I18N = {
     ]
   },
   en: {
-    tag: 'The trick-taking game that goes up and down. Call it right, play smart.', pillCall: 'call', pillTaken: 'took', langBtn: 'Change language', freeBtn: 'Free version', freeActive: 'Free version active', freeTitle: 'Free version', freeText: 'To create an online game, join with a code or go back into one from the list you need the free version code. Type it once: it stays active on this device. The demo is open to everyone.', freeAlready: 'The free version is already active on this device: you can play online.', freeCode: 'Free version code', freeActivate: 'Activate', freeOk: 'Free version activated', freeBad: 'Wrong code, check capital letters and symbols.', viewTop: 'View from above', viewRoom: 'See the room', room_bar: 'Lobby bar', room_library: 'Restaurant', room_jazz: 'Jazz lounge', room_cigar: 'Private events room', lookReset: 'Back to the table', music: 'Music', volume: 'Volume', musicOn: 'Turn music on', musicOff: 'Turn music off', dragLook: 'Drag to look around, use the wheel or two fingers to zoom', room_rooftop: 'Rooftop terrace', room_hall: 'Hotel lobby', soundOn: 'Turn sounds on', soundOff: 'Turn sounds off', soundSub: 'Cards, elevator bell, your turn', onlineNow: '{n} online', stLobby: 'Waiting for players', stPlaying: 'Playing, hand {r}/{n}', stPaused: 'Paused', stSaved: 'Saved', stEnded: 'Finished', enterBtn: 'Go back in', watch: 'Watch', delete: 'Delete', deleteQ: 'Delete this game for everyone?', openGames: 'Online games', savedHere: 'Games saved on this device', menu: 'Menu', saveExit: 'Save and exit', saveExitDemo: 'You will find it on the start screen', saveExitOnline: 'Stops the time for everyone; you can go back in from the game list', pauseSub: 'It starts again by itself after 10 minutes', resetLayout: 'Put panels and objects back', resetLayoutSub: 'Undo the moves you made', abandon: 'Leave the game', abandonSub: 'The computer will play for you', abandonQ: 'Leave the game? The computer will play for you until the end.', backHomeSub: 'The game stays open, you can go back in', savedTitle: 'Game saved', savedBy: 'The host saved the game. Go back in from the game list when you want, with full time.', savedToast: 'Game saved', whereHome: 'on the start screen', whereDemo: 'trying the demo', whereRoom: 'in room {c}', anon: 'No name', dragHint: 'Drag to move, double-click to put it back', minimize: 'Minimize', playHint: 'Tap the card again or the table to play it',
+    tag: 'The trick-taking game that goes up and down. Call it right, play smart.', pillCall: 'call', pillTaken: 'took', langBtn: 'Change language', freeBtn: 'Free version', freeActive: 'Free version active', freeTitle: 'Free version', freeText: 'To create an online game, join with a code or go back into one from the list you need the free version code. Type it once: it stays active on this device. The demo is open to everyone.', freeAlready: 'The free version is already active on this device: you can play online.', freeCode: 'Free version code', freeActivate: 'Activate', freeOk: 'Free version activated', freeBad: 'Wrong code, check capital letters and symbols.', viewTop: 'View from above', viewRoom: 'See the room', room_bar: 'Lobby bar', room_library: 'Restaurant', room_jazz: 'Jazz lounge', room_cigar: 'Private events room', lookReset: 'Back to the table', music: 'Music', volume: 'Volume', musicOn: 'Turn music on', musicOff: 'Turn music off', dragLook: 'Drag to look around, use the wheel or two fingers to zoom', room_rooftop: 'Rooftop terrace', room_hall: 'Hotel lobby', soundOn: 'Turn sounds on', soundOff: 'Turn sounds off', soundSub: 'Cards, elevator bell, your turn', onlineNow: '{n} online', stLobby: 'Waiting for players', stPlaying: 'Playing, hand {r}/{n}', stPaused: 'Paused', stSaved: 'Saved', stEnded: 'Finished', enterBtn: 'Go back in', watch: 'Watch', delete: 'Delete', deleteGame: 'Delete game', deleteGameSub: 'Removes it for all players', deleteHostOnly: 'Only the player who created the game can delete it.', adminLink: 'Administrator access', adminKey: 'Administrator key', adminOk: 'Administrator access is on', adminBad: 'Wrong key.', adminOn: 'Administrator is on for this device.', adminOff: 'Turn off', deleteQ: 'Delete this game for everyone?', openGames: 'Online games', savedHere: 'Games saved on this device', menu: 'Menu', saveExit: 'Save and exit', saveExitDemo: 'You will find it on the start screen', saveExitOnline: 'Stops the time for everyone; you can go back in from the game list', pauseSub: 'It starts again by itself after 10 minutes', resetLayout: 'Put panels and objects back', resetLayoutSub: 'Undo the moves you made', abandon: 'Leave the game', abandonSub: 'The computer will play for you', abandonQ: 'Leave the game? The computer will play for you until the end.', backHomeSub: 'The game stays open, you can go back in', savedTitle: 'Game saved', savedBy: 'The host saved the game. Go back in from the game list when you want, with full time.', savedToast: 'Game saved', whereHome: 'on the start screen', whereDemo: 'trying the demo', whereRoom: 'in room {c}', anon: 'No name', dragHint: 'Drag to move, double-click to put it back', minimize: 'Minimize', playHint: 'Tap the card again or the table to play it',
     yourName: 'Your name', namePh: 'What friends call you',
     create: 'Create room', join: 'Join', code: 'Room code', or: 'or',
     demo: 'Try the demo', rules: 'Rules', language: 'Language',
@@ -900,7 +904,7 @@ const I18N = {
     ]
   },
   es: {
-    tag: 'El juego de bazas que sube y baja. Pide bien, juega con cabeza.', pillCall: 'pide', pillTaken: 'hizo', langBtn: 'Cambiar idioma', freeBtn: 'Versión free', freeActive: 'Versión free activa', freeTitle: 'Versión free', freeText: 'Para crear una partida online, entrar con un código o volver a una de la lista necesitas el código de la versión free. Lo escribes una sola vez: queda activo en este dispositivo. La demo es libre para todos.', freeAlready: 'La versión free ya está activa en este dispositivo: puedes jugar online.', freeCode: 'Código de la versión free', freeActivate: 'Activar', freeOk: 'Versión free activada', freeBad: 'Código no válido, revisa mayúsculas y símbolos.', viewTop: 'Vista desde arriba', viewRoom: 'Ver la sala', room_bar: 'Bar del vestíbulo', room_library: 'Restaurante', room_jazz: 'Salón de jazz', room_cigar: 'Salón de eventos', lookReset: 'Volver a la mesa', music: 'Música', volume: 'Volumen', musicOn: 'Encender la música', musicOff: 'Apagar la música', dragLook: 'Arrastra para mirar alrededor, rueda o dos dedos para acercarte', room_rooftop: 'Terraza en la azotea', room_hall: 'Vestíbulo del hotel', soundOn: 'Activar sonidos', soundOff: 'Quitar sonidos', soundSub: 'Cartas, timbre del ascensor, tu turno', onlineNow: '{n} en línea', stLobby: 'Esperando jugadores', stPlaying: 'En juego, mano {r}/{n}', stPaused: 'En pausa', stSaved: 'Guardada', stEnded: 'Terminada', enterBtn: 'Volver', watch: 'Mirar', delete: 'Borrar', deleteQ: '¿Borrar esta partida para todos?', openGames: 'Partidas online', savedHere: 'Partidas guardadas en este dispositivo', menu: 'Menú', saveExit: 'Guardar y salir', saveExitDemo: 'La encontrarás en la pantalla de inicio', saveExitOnline: 'Para el tiempo para todos; se vuelve desde la lista de partidas', pauseSub: 'Sigue sola después de 10 minutos', resetLayout: 'Devolver paneles y objetos a su sitio', resetLayoutSub: 'Deshace lo que has movido', abandon: 'Abandonar la partida', abandonSub: 'El ordenador jugará por ti', abandonQ: '¿Abandonar? El ordenador jugará por ti hasta el final.', backHomeSub: 'La partida sigue abierta, puedes volver', savedTitle: 'Partida guardada', savedBy: 'El anfitrión ha guardado la partida. Volved desde la lista de partidas cuando queráis, con el tiempo completo.', savedToast: 'Partida guardada', whereHome: 'en la pantalla de inicio', whereDemo: 'probando la demo', whereRoom: 'en la sala {c}', anon: 'Sin nombre', dragHint: 'Arrastra para mover, doble clic para devolverlo a su sitio', minimize: 'Reducir', playHint: 'Toca otra vez la carta o la mesa para jugarla',
+    tag: 'El juego de bazas que sube y baja. Pide bien, juega con cabeza.', pillCall: 'pide', pillTaken: 'hizo', langBtn: 'Cambiar idioma', freeBtn: 'Versión free', freeActive: 'Versión free activa', freeTitle: 'Versión free', freeText: 'Para crear una partida online, entrar con un código o volver a una de la lista necesitas el código de la versión free. Lo escribes una sola vez: queda activo en este dispositivo. La demo es libre para todos.', freeAlready: 'La versión free ya está activa en este dispositivo: puedes jugar online.', freeCode: 'Código de la versión free', freeActivate: 'Activar', freeOk: 'Versión free activada', freeBad: 'Código no válido, revisa mayúsculas y símbolos.', viewTop: 'Vista desde arriba', viewRoom: 'Ver la sala', room_bar: 'Bar del vestíbulo', room_library: 'Restaurante', room_jazz: 'Salón de jazz', room_cigar: 'Salón de eventos', lookReset: 'Volver a la mesa', music: 'Música', volume: 'Volumen', musicOn: 'Encender la música', musicOff: 'Apagar la música', dragLook: 'Arrastra para mirar alrededor, rueda o dos dedos para acercarte', room_rooftop: 'Terraza en la azotea', room_hall: 'Vestíbulo del hotel', soundOn: 'Activar sonidos', soundOff: 'Quitar sonidos', soundSub: 'Cartas, timbre del ascensor, tu turno', onlineNow: '{n} en línea', stLobby: 'Esperando jugadores', stPlaying: 'En juego, mano {r}/{n}', stPaused: 'En pausa', stSaved: 'Guardada', stEnded: 'Terminada', enterBtn: 'Volver', watch: 'Mirar', delete: 'Borrar', deleteGame: 'Borrar partida', deleteGameSub: 'Se borra para todos los jugadores', deleteHostOnly: 'Solo quien creó la partida puede borrarla.', adminLink: 'Acceso de administrador', adminKey: 'Clave de administrador', adminOk: 'Acceso de administrador activo', adminBad: 'Clave no válida.', adminOn: 'Administrador activo en este dispositivo.', adminOff: 'Desactivar', deleteQ: '¿Borrar esta partida para todos?', openGames: 'Partidas online', savedHere: 'Partidas guardadas en este dispositivo', menu: 'Menú', saveExit: 'Guardar y salir', saveExitDemo: 'La encontrarás en la pantalla de inicio', saveExitOnline: 'Para el tiempo para todos; se vuelve desde la lista de partidas', pauseSub: 'Sigue sola después de 10 minutos', resetLayout: 'Devolver paneles y objetos a su sitio', resetLayoutSub: 'Deshace lo que has movido', abandon: 'Abandonar la partida', abandonSub: 'El ordenador jugará por ti', abandonQ: '¿Abandonar? El ordenador jugará por ti hasta el final.', backHomeSub: 'La partida sigue abierta, puedes volver', savedTitle: 'Partida guardada', savedBy: 'El anfitrión ha guardado la partida. Volved desde la lista de partidas cuando queráis, con el tiempo completo.', savedToast: 'Partida guardada', whereHome: 'en la pantalla de inicio', whereDemo: 'probando la demo', whereRoom: 'en la sala {c}', anon: 'Sin nombre', dragHint: 'Arrastra para mover, doble clic para devolverlo a su sitio', minimize: 'Reducir', playHint: 'Toca otra vez la carta o la mesa para jugarla',
     yourName: 'Tu nombre', namePh: 'Cómo te llaman en la mesa',
     create: 'Crear sala', join: 'Entrar', code: 'Código de sala', or: 'o',
     demo: 'Probar la demo', rules: 'Reglas', language: 'Idioma',
@@ -2794,6 +2798,8 @@ let demoTimer = null;
 const FREE_HASH = 'e0f9859dd77e4e5f';
 function fnv(str) { let h = 0x811c9dc5; for (const b of new TextEncoder().encode(str)) { h ^= b; h = Math.imul(h, 0x01000193) >>> 0; } return h; }
 function codeHash(c) { return fnv('asc|' + c).toString(16).padStart(8, '0') + fnv(c + '|ascensore').toString(16).padStart(8, '0'); }
+const adminKey = () => store.get('adminKey', '');
+const isAdmin = () => cfOn() && !!adminKey();
 const freeOn = () => store.get('free', false) === true && (!cfOn() || !!store.get('freeCode', ''));
 function needFree() { if (freeOn()) return false; A.modal = 'free'; A.freeErr = ''; render(); setTimeout(() => { const i = $('#freeIn'); if (i) i.focus(); }, 60); return true; }
 
@@ -2909,6 +2915,13 @@ async function cfLoadRooms() {
     A.rooms = (j.rooms || []).sort((a, b) => (b.updatedAt || 0) - (a.updatedAt || 0));
     if (A.screen === 'home') renderHome();
   } catch (e) {}
+}
+
+function deleteRoom(code, after) {
+  if (!confirm(t('deleteQ'))) return;
+  const done = () => { if (after) after(); if (cfOn()) cfLoadRooms(); };
+  if (cfOn()) cfPost('/delete', { code, uid: Net.uid, admin: adminKey() }).then(done).catch(e => toast(e.code === 'host' ? t('deleteHostOnly') : t('genericErr')));
+  else Promise.all([Net.db.doc('rooms/' + code).delete(), Net.db.doc('index/' + code).delete()]).then(done).catch(() => toast(t('genericErr')));
 }
 
 async function initNet() {
@@ -3428,7 +3441,7 @@ function renderHome() {
   if (ok && A.rooms && A.rooms.length) {
     const rows = A.rooms.slice(0, 12).map(r => {
       const mine = (r.players || []).some(p => p.uid === Net.uid);
-      const host = r.hostUid === Net.uid;
+      const host = r.hostUid === Net.uid || isAdmin();
       const st = t(STATUS_KEY[r.status] || 'stPlaying', { r: r.round, n: r.total });
       let btn;
       if (mine) btn = `<button class="btn small" data-act="openRoom" data-code="${esc(r.code)}">${esc(r.status === 'saved' || r.status === 'paused' ? t('resumeBtn') : t('enterBtn'))}</button>`;
@@ -3436,7 +3449,7 @@ function renderHome() {
       else btn = `<button class="btn ghost small" data-act="openRoom" data-code="${esc(r.code)}">${esc(t('watch'))}</button>`;
       return `<li class="${mine ? 'mine' : ''}"><div class="ri"><b>${esc(r.code)}</b><span class="st st-${esc(r.status)}">${esc(st)}</span>
         <small>${(r.players || []).map(p => esc(p.name)).join(', ')}</small><small class="when">${esc(fmtWhen(r.updatedAt))}</small></div>
-        <div class="rb">${btn}${host ? `<button class="btn ghost small" data-act="delRoom" data-code="${esc(r.code)}" aria-label="${esc(t('delete'))}">✕</button>` : ''}</div></li>`;
+        <div class="rb">${btn}${host ? `<button class="btn ghost small delbtn" data-act="delRoom" data-code="${esc(r.code)}">${esc(t('delete'))}</button>` : ''}</div></li>`;
     }).join('');
     html += `<div class="listbox"><h2>${esc(t('openGames'))}</h2><ul class="rlist">${rows}</ul></div>`;
   }
@@ -3484,6 +3497,7 @@ function renderLobby() {
   const can = S.players.length >= 3;
   setHTML($('#lstart'), host ? `<button class="btn wide" data-act="start" ${can ? '' : 'disabled'}>${esc(t('start'))}</button>${can ? '' : `<p class="note" style="text-align:center">${esc(t('needPlayers'))}</p>`}`
     : `<p class="note" style="text-align:center">${esc(t('waitingHost'))}</p>`);
+  if (host) setHTML($('#lstart'), $('#lstart').innerHTML + `<button class="btn ghost wide delbtn" style="margin-top:8px" data-act="delThis">${esc(t('deleteGame'))}</button>`);
   renderChatMsgs('l');
 }
 
@@ -3999,6 +4013,7 @@ function sheetSkel() {
     b += `<div class="mitem"><b>${esc(t('language'))}</b>${langSelect().replace('class="lang"', 'class="lang light"')}</div>`;
     b += item('soundToggle', soundOn ? t('soundOff') : t('soundOn'), t('soundSub'));
     b += item('resetLayout', t('resetLayout'), t('resetLayoutSub'));
+    if (A.mode === 'online' && host) b += item('delThis', t('deleteGame'), t('deleteGameSub'), 'danger');
     if (inGame && A.mode === 'online' && mySeat() >= 0) b += item('abandon', t('abandon'), t('abandonSub'), 'danger');
     b += item('home', t('backHome'), A.mode === 'online' && inGame ? t('backHomeSub') : '');
     return head(t('menu')) + `<div class="body menu">${b}</div>`;
@@ -4029,7 +4044,9 @@ function modalHTML() {
   if (A.modal === 'free') {
     return `<header><h2>${esc(t('freeTitle'))}</h2>${close}</header><div class="body"><p>${esc(freeOn() ? t('freeAlready') : t('freeText'))}</p>
       ${freeOn() ? '' : `<form data-form="free" class="freeform"><input id="freeIn" class="input" autocomplete="off" placeholder="${esc(t('freeCode'))}" aria-label="${esc(t('freeCode'))}">
-      <button class="btn">${esc(t('freeActivate'))}</button></form><p class="freeerr" id="freeErr">${esc(A.freeErr || '')}</p>`}</div>`;
+      <button class="btn">${esc(t('freeActivate'))}</button></form><p class="freeerr" id="freeErr">${esc(A.freeErr || '')}</p>`}
+      ${cfOn() ? (isAdmin() ? `<p class="note">✓ ${esc(t('adminOn'))} <button class="btn ghost small" data-act="adminOff">${esc(t('adminOff'))}</button></p>`
+        : `<details class="admin"><summary>${esc(t('adminLink'))}</summary><form data-form="admin" class="freeform"><input id="adminIn" type="password" class="input" autocomplete="off" placeholder="${esc(t('adminKey'))}" aria-label="${esc(t('adminKey'))}"><button class="btn">${esc(t('freeActivate'))}</button></form><p class="freeerr" id="adminErr"></p></details>`) : ''}</div>`;
   }
   if (A.modal === 'demo') {
     return `<header><h2>${esc(t('demoTitle'))}</h2>${close}</header><div class="body"><p>${esc(t('demoHow'))}</p>
@@ -4080,6 +4097,7 @@ document.addEventListener('click', e => {
     }
     case 'resumeRoom': { if (needFree()) return; const s = store.get('session', null); if (s) enterRoom(s.code, '', false); break; }
     case 'forget': store.del('session'); render(); break;
+    case 'adminOff': store.del('adminKey'); render(); renderHome(); break;
     case 'freeOpen': A.modal = 'free'; A.freeErr = ''; render(); break;
     case 'demoAsk': { const nm = myName(); if (nm) store.set('name', nm); A.modal = 'demo'; render(); break; }
     case 'demoN': startDemo(Number(el.dataset.n)); break;
@@ -4120,13 +4138,8 @@ document.addEventListener('click', e => {
     case 'bidMin': A.bidMin = true; render(); break;
     case 'onlineList': A.modal = 'online'; render(); break;
     case 'openRoom': { if (needFree()) return; const nm = myName(); if (nm) store.set('name', nm); enterRoom(el.dataset.code, nm, false); break; }
-    case 'delRoom': {
-      if (!confirm(t('deleteQ'))) return;
-      const c = el.dataset.code;
-      if (cfOn()) cfPost('/delete', { code: c, uid: Net.uid }).then(cfLoadRooms).catch(() => toast(t('genericErr')));
-      else Promise.all([Net.db.doc('rooms/' + c).delete(), Net.db.doc('index/' + c).delete()]).catch(() => toast(t('genericErr')));
-      break;
-    }
+    case 'delRoom': deleteRoom(el.dataset.code); break;
+    case 'delThis': { const c = A.S && A.S.code; A.sheet = null; if (c) deleteRoom(c, () => { store.del('session'); cleanupOnline(); goHome(); }); break; }
     case 'loadSave': loadLocal(el.dataset.id); break;
     case 'delSave': store.set('saves', store.get('saves', []).filter(x => x.id !== el.dataset.id)); render(); break;
     case 'saveExit':
@@ -4220,6 +4233,14 @@ document.addEventListener('change', e => {
   if (el.dataset.change === 'lang') setLang(el.value);
 });
 document.addEventListener('submit', e => {
+  const af = e.target.closest('[data-form="admin"]');
+  if (af) {
+    e.preventDefault();
+    const v = (af.querySelector('input').value || '').trim();
+    cfPost('/admin', { key: v }).then(() => { store.set('adminKey', v); A.modal = null; toast(t('adminOk')); render(); cfLoadRooms(); })
+      .catch(() => { const el = $('#adminErr'); if (el) el.textContent = t('adminBad'); });
+    return;
+  }
   const ff = e.target.closest('[data-form="free"]');
   if (ff) {
     e.preventDefault();
